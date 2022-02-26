@@ -9,6 +9,8 @@ services:
       - mpi-network
     stdin_open: true
     tty: true
+    volumes:
+      - ./src:/workspace
   
   mpi-node-2:
     build: .
@@ -18,6 +20,8 @@ services:
       - mpi-network
     stdin_open: true
     tty: true
+    volumes:
+      - ./src:/workspace
 
   mpi-node-3:
     build: .
@@ -27,6 +31,8 @@ services:
       - mpi-network
     stdin_open: true
     tty: true
+    volumes:
+      - ./src:/workspace
 
 networks:
   mpi-network:
