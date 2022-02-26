@@ -2,6 +2,8 @@ FROM orwel84/ubuntu-16-mpi:latest
 
 WORKDIR /workspace
 
+COPY ./entrypoint.sh /
+
 RUN apt-get clean \
     && apt-get update \
     && apt-get install openssh-server openssh-client net-tools sudo dnsutils -y \
@@ -13,4 +15,4 @@ RUN apt-get clean \
 	&& chown root /root \
 	&& chown root /root/.ssh
 
-ENTRYPOINT service ssh restart && bash
+ENTRYPOINT [ "/entrypoint.sh" ]
