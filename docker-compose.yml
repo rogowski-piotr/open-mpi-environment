@@ -1,0 +1,32 @@
+version: '3.9'
+
+services:
+  mpi-node-1:
+    build: .
+    container_name: mpi-node-1
+    hostname: 'mpi-node-1'
+    networks:
+      - mpi-network
+    stdin_open: true
+    tty: true
+  
+  mpi-node-2:
+    build: .
+    container_name: mpi-node-2
+    hostname: 'mpi-node-2'
+    networks:
+      - mpi-network
+    stdin_open: true
+    tty: true
+
+  mpi-node-3:
+    build: .
+    container_name: mpi-node-3
+    hostname: 'mpi-node-3'
+    networks:
+      - mpi-network
+    stdin_open: true
+    tty: true
+
+networks:
+  mpi-network:
