@@ -1,4 +1,4 @@
-FROM orwel84/ubuntu-16-mpi:latest
+FROM brute/brute_openmpi:latest
 
 WORKDIR /workspace
 
