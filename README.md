@@ -23,14 +23,7 @@ ssh-copy-id root@mpi-node-1 \
 	&& ssh-copy-id root@mpi-node-3
 ```
 
-#### 4. Ensure that host.txt contains only unique elements
-
-#### 5. Compile the program
+#### 4. Compile, Execute, Clean
 ```shell script
-mpicc example.c -o example
-```
-
-#### 6. Run
-```shell script
-mpirun -hostfile hosts.txt -np 4 --allow-run-as-root example
+make && make run && make clean
 ```
